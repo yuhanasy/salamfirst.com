@@ -1,14 +1,11 @@
+import Link from "next/link";
 import React from "react";
 
-async function getPosts() {
-  const posts = await fetch(`${process.env.API_URL}/posts`);
-
-  return posts.json();
+export default async function Page() {
+  return (
+    <main>
+      <h1>Salamfirst</h1>
+      <Link href="/blog">Visit Blog</Link>
+    </main>
+  );
 }
-
-const Page = async () => {
-  const posts = await getPosts();
-  return <pre>{JSON.stringify(posts, null, 2)}</pre>;
-};
-
-export default Page;
