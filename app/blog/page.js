@@ -16,11 +16,11 @@ export default async function Page() {
 
   return (
     <div>
-      <main className="prose lg:prose-lg">
-        <h1>Articles</h1>
+      <main>
+        <h1 className="font-serif">Articles</h1>
         {posts.map((post) => (
           <div key={post.id}>
-            <h3>{post.title?.rendered}</h3>
+            <h3 className="font-serif">{post.title?.rendered}</h3>
             <div dangerouslySetInnerHTML={{ __html: omitReadMore(post.excerpt?.rendered) }} />
             <Link href={`/blog/${post.id}`}>Read More</Link>
           </div>

@@ -11,8 +11,8 @@ export default async function Page({ params }) {
 
   return (
     <div>
-      <article className="prose lg:prose-lg">
-        <h1>{post.title.rendered}</h1>
+      <article>
+        <h1 className="font-serif">{post.title.rendered}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.content?.rendered }} />
       </article>
     </div>
